@@ -200,7 +200,7 @@ def hard_function():
             elif event.type == MOUSEBUTTONUP:
                 drawing = False
                 if draw_counter == draw_limit:
-                    # # Генерация случайных координат для 100 красных клеток
+                    # # Генерация случайных координат для 50 красных клеток
                     red_cells = set()
                     while len(red_cells) < 50:
                         i, j = random.randint(0, len(cells) - 1), random.randint(0, len(cells[0]) - 1)
