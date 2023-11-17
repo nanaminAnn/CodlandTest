@@ -46,6 +46,7 @@ class Menu:
 
 # 1 уровень, созерцание
 def contemplation_function():
+    clock = pygame.time.Clock()
     # Создаем окно
     root = pygame.display.set_mode((500 , 500))
     pygame.display.set_caption("Game of Life. Сontemplation")
@@ -78,7 +79,7 @@ def contemplation_function():
 
         for i in range(0 , len(cells)):
             for j in range(0 , len(cells[i])):
-                print(cells[i][j],i,j)
+#                print(cells[i][j],i,j)
                 pygame.draw.rect(root , (0, 255 * cells[i][j] % 256 , 0) , [i * 20 , j * 20 , 20 , 20])
         # Обновляем экран
         pygame.display.update()
@@ -96,6 +97,9 @@ def contemplation_function():
                     continue
                 cells2[i][j] = 0
         cells = cells2 
+
+        pygame.display.update()
+        clock.tick(30)
 
 # 2 уровень, средний
 def average_function():
